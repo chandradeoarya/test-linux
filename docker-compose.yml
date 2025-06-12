@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  gui:
+    build: .
+    ports:
+      - "6080:6080"
+    environment:
+      # If Coolify or other platforms set PORT, override here; for local default:
+      - PORT=6080
+    restart: unless-stopped
